@@ -9,19 +9,39 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             userId: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false,
+                validate: {
+                    isInt: true
+                }
             },
             initBalance: {
-                type: Sequelize.DOUBLE
+                type: Sequelize.DOUBLE,
+                allowNull: false,
+                validate: {
+                    isNumeric: true
+                }
             },
             totalExpense: {
-                type: Sequelize.DOUBLE
+                type: Sequelize.DOUBLE,
+                allowNull: false,
+                validate: {
+                    isNumeric: true
+                }
             },
             totalIncome: {
-                type: Sequelize.DOUBLE
+                type: Sequelize.DOUBLE,
+                allowNull: false,
+                validate: {
+                    isNumeric: true
+                }
             },
             finalBalance: {
-                type: Sequelize.DOUBLE
+                type: Sequelize.DOUBLE,
+                allowNull: false,
+                validate: {
+                    isNumeric: true
+                }
             },
             createdAt: {
                 allowNull: false,

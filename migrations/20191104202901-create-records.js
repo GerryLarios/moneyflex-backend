@@ -9,19 +9,36 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             userId: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false,
+                validate: {
+                    isInt: true
+                }
             },
             conceptId: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false,
+                validate: {
+                    isInt: true
+                }
             },
             dayId: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false,
+                validate: {
+                    isInt: true
+                }
             },
             amount: {
-                type: Sequelize.DOUBLE
+                type: Sequelize.DOUBLE,
+                allowNull: false,
+                validate: {
+                    isNumeric: true
+                }
             },
             description: {
-                type: Sequelize.STRING
+                type: Sequelize.STRING,
+                allowNull: false
             },
             createdAt: {
                 allowNull: false,

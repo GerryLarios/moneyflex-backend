@@ -6,21 +6,32 @@ module.exports = {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
             },
             userId: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false,
+                validate: {
+                    isInt: true
+                }
             },
             name: {
-                type: Sequelize.STRING
+                type: Sequelize.STRING,
+                allowNull: false,
+                validate: {
+                    isAlphanumeric: true
+                }
             },
             category: {
                 type: Sequelize.ENUM,
                 values: ['income', 'expense', 'saving'],
-                defaultValue: 'expense'
+                defaultValue: 'expense',
+                allowNull: false
             },
             active: {
-                type: Sequelize.BOOLEAN
+                type: Sequelize.BOOLEAN,
+                defaultValue: true,
+                allowNull: false,
             },
             createdAt: {
                 allowNull: false,
