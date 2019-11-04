@@ -23,7 +23,7 @@ To create the database:
 To create models:
 
 ```bash
-sequelize model:create --name Users --attributes email:string,password:string,admin:boolean,active:boolen
+sequelize model:create --name Users --attributes email:string,password:string,admin:boolean,active:boolean
 
 sequelize model:create --name Concepts --attributes userId:integer,name:string,active:boolean
 
