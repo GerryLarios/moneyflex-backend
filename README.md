@@ -16,7 +16,21 @@ The models of this project are made with sequelize-cli:
 
 `sequelize init`
 
+To create the database:
+
+`sequelize db:create`
+
 To create models:
+
+```bash
+sequelize model:create --name Users --attributes email:string,password:string,admin:boolean,active:boolen
+
+sequelize model:create --name Concepts --attributes userId:integer,name:string,active:boolean
+
+sequelize model:create --name Days --attributes userId:integer,initBalance:double,totalExpense:double,totalIncome:double,finalBalance:double
+
+sequelize model:create --name Records --attributes userId:integer,conceptId:integer,dayId:integer,amount:double,description:string
+```
 
 ## Postgres
 
